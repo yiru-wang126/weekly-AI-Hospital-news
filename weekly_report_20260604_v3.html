@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>【本周上海区级医院信息化商机周报】第22周 2026-06-04</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", sans-serif;
+    background: #f0f2f5;
+    color: #1a1a2e;
+    font-size: 14px;
+  }
+  .header {
+    background: linear-gradient(135deg, #0a2463 0%, #1e4d8c 60%, #2874c5 100%);
+    color: #fff;
+    padding: 28px 40px 22px;
+    position: relative;
+    overflow: hidden;
+  }
+  .header::after {
+    content: '';
+    position: absolute;
+    right: -60px; top: -40px;
+    width: 260px; height: 260px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.06);
+  }
+  .header-logo {
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 6px;
+  }
+  .header h1 { font-size: 22px; font-weight: 700; letter-spacing: 1px; margin-bottom: 4px; }
+  .header-sub { font-size: 13px; color: rgba(255,255,255,0.75); }
+  .header-meta {
+    display: flex;
+    gap: 16px;
+    margin-top: 16px;
+    flex-wrap: wrap;
+  }
+  .meta-pill {
+    background: rgba(255,255,255,0.14);
+    border: 1px solid rgba(255,255,255,0.22);
+    border-radius: 20px;
+    padding: 4px 14px;
+    font-size: 12px;
+    color: rgba(255,255,255,0.9);
+  }
+  .summary-bar {
+    display: flex;
+    gap: 16px;
+    padding: 20px 40px;
+    background: #fff;
+    border-bottom: 1px solid #e8edf3;
+    flex-wrap: wrap;
+  }
+  .sum-card {
+    flex: 1; min-width: 120px;
+    border-radius: 10px;
+    padding: 14px 18px;
+    text-align: center;
+  }
+  .sum-card .num { font-size: 28px; font-weight: 800; }
+  .sum-card .lbl { font-size: 11px; margin-top: 2px; opacity: 0.8; }
+  .sc-total  { background: #eef2fb; color: #1e4d8c; }
+  .sc-a      { background: #fff0f0; color: #c0392b; }
+  .sc-b      { background: #fff8ec; color: #e07b00; }
+  .sc-c      { background: #edfbf3; color: #1a7a45; }
+  .sc-dist   { background: #f5f0ff; color: #5a2d9c; }
+  .notice-bar {
+    margin: 20px 40px 0;
+    background: #fffbe6;
+    border: 1px solid #ffe58f;
+    border-radius: 8px;
+    padding: 12px 18px;
+    font-size: 13px;
+    color: #7c5800;
+    line-height: 1.7;
+  }
+  .notice-bar strong { color: #b37400; }
+  .section { margin: 24px 40px 0; }
+  .section-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 16px;
+    border-radius: 8px 8px 0 0;
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+  }
+  .st-a { background: linear-gradient(90deg, #c0392b, #e74c3c); }
+  .st-b { background: linear-gradient(90deg, #e07b00, #f39c12); }
+  .st-c { background: linear-gradient(90deg, #1a7a45, #27ae60); }
+  .tbl-wrap {
+    overflow-x: auto;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    margin-bottom: 6px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    font-size: 13px;
+  }
+  thead th {
+    background: #f7f9fc;
+    color: #555;
+    font-weight: 600;
+    padding: 10px 12px;
+    text-align: left;
+    white-space: nowrap;
+    border-bottom: 2px solid #e3e8f0;
+  }
+  tbody tr { border-bottom: 1px solid #f0f3f8; }
+  tbody tr:last-child { border-bottom: none; }
+  tbody tr:hover { background: #fafbff; }
+  tbody tr:nth-child(even) { background: #fafcff; }
+  tbody tr:nth-child(even):hover { background: #f3f6ff; }
+  td { padding: 11px 12px; vertical-align: top; line-height: 1.55; }
+  td.idx {
+    font-weight: 700;
+    font-size: 15px;
+    text-align: center;
+    min-width: 36px;
+  }
+  .idx-a { color: #c0392b; }
+  .idx-b { color: #e07b00; }
+  .idx-c { color: #1a7a45; }
+  td.hosp { font-weight: 600; min-width: 150px; color: #0a2463; }
+  td.hosp .district { font-size: 11px; color: #888; font-weight: 400; margin-top: 2px; }
+  td.src { font-size: 12px; color: #555; min-width: 200px; }
+  td.src .doc-no {
+    display: inline-block;
+    background: #eef2fb;
+    border-radius: 4px;
+    padding: 1px 6px;
+    font-size: 11px;
+    color: #1e4d8c;
+    margin-top: 3px;
+    font-family: monospace;
+  }
+  td.biz { font-size: 12px; color: #444; min-width: 120px; }
+  td.grade { text-align: center; min-width: 60px; }
+  .badge {
+    display: inline-block;
+    border-radius: 14px;
+    padding: 3px 11px;
+    font-size: 12px;
+    font-weight: 700;
+  }
+  .badge-a { background: #fff0f0; color: #c0392b; border: 1px solid #f5b7b1; }
+  .badge-b { background: #fff8ec; color: #e07b00; border: 1px solid #fad7a0; }
+  .badge-c { background: #edfbf3; color: #1a7a45; border: 1px solid #a9dfbf; }
+  td.month { white-space: nowrap; font-weight: 600; color: #333; min-width: 85px; }
+  td.dept { font-size: 12px; color: #555; min-width: 100px; }
+  td.prod { font-size: 12px; min-width: 170px; }
+  .tag {
+    display: inline-block;
+    background: #eef2fb;
+    color: #1e4d8c;
+    border-radius: 4px;
+    padding: 2px 7px;
+    font-size: 11px;
+    margin: 2px 2px 2px 0;
+    white-space: nowrap;
+  }
+  td.link a {
+    color: #2874c5;
+    text-decoration: none;
+    font-size: 12px;
+    word-break: break-all;
+  }
+  td.link a:hover { text-decoration: underline; }
+  .action-section {
+    margin: 24px 40px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    overflow: hidden;
+  }
+  .action-title {
+    background: linear-gradient(90deg, #0a2463, #1e4d8c);
+    color: #fff;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: 700;
+  }
+  .action-body {
+    padding: 16px 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 12px;
+  }
+  .action-item {
+    border-left: 4px solid;
+    padding: 10px 14px;
+    border-radius: 0 6px 6px 0;
+    background: #fafbff;
+    font-size: 13px;
+    line-height: 1.6;
+  }
+  .ai-urgent { border-color: #c0392b; }
+  .ai-important { border-color: #e07b00; }
+  .ai-reserve { border-color: #1a7a45; }
+  .action-item strong { display: block; font-size: 12px; color: #888; margin-bottom: 4px; }
+  .footer {
+    margin: 0 40px 32px;
+    text-align: center;
+    font-size: 12px;
+    color: #999;
+    padding-top: 16px;
+    border-top: 1px solid #e8edf3;
+  }
+  .footer span { color: #2874c5; font-weight: 600; }
+  @media (max-width: 768px) {
+    .header, .summary-bar, .section, .action-section, .notice-bar, .footer {
+      margin-left: 16px; margin-right: 16px; padding-left: 16px; padding-right: 16px;
+    }
+    .summary-bar { padding: 16px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-logo">H3C Medical Sales Intelligence · Shanghai</div>
+  <h1>【本周上海区级医院信息化商机周报】</h1>
+  <div class="header-sub">医疗信息化前置商机情报 · 新华三医疗线销售专用</div>
+  <div class="header-meta">
+    <span class="meta-pill">📅 统计周期：2026年5月29日—6月4日（第22周）</span>
+    <span class="meta-pill">🗓 生成日期：2026年6月4日</span>
+    <span class="meta-pill">📍 覆盖区域：上海全市16区</span>
+    <span class="meta-pill">🔖 版本：V3.0（文件级来源·存量+增量）</span>
+  </div>
+</div>
+
+<div class="summary-bar">
+  <div class="sum-card sc-total"><div class="num">14</div><div class="lbl">本期总线索</div></div>
+  <div class="sum-card sc-a"><div class="num">2</div><div class="lbl">🔴 A级 紧急跟进</div></div>
+  <div class="sum-card sc-b"><div class="num">8</div><div class="lbl">🟠 B级 重点培育</div></div>
+  <div class="sum-card sc-c"><div class="num">4</div><div class="lbl">🟢 C级 长线储备</div></div>
+  <div class="sum-card sc-dist"><div class="num">9</div><div class="lbl">覆盖区县数</div></div>
+</div>
+
+<div class="notice-bar">
+  📌 <strong>数据源说明：</strong>本期全部线索均源自政府文件级渠道（发改委批复、卫健委公告、规资局征地公告、政府采购平台），每条附具体文件编号可溯源。涵盖近12个月已批复但尚未启动信息化招标的存量前置商机 + 本周新增线索。
+</div>
+
+<!-- ══════════ A级 ══════════ -->
+<div class="section">
+  <div class="section-title st-a">🔴 A级商机（紧急跟进｜预计1-6个月内启动信息化选型）</div>
+  <div class="tbl-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>序号</th>
+          <th>医院名称（所属区县）</th>
+          <th>信息来源 &amp; 文件出处</th>
+          <th>商机类型</th>
+          <th>评级</th>
+          <th>预估招标落地</th>
+          <th>优先对接科室</th>
+          <th>适配H3C产品方向</th>
+          <th>网址</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="idx idx-a">1</td>
+          <td class="hosp">浦东新区东明社区卫生服务中心<div class="district">浦东新区</div></td>
+          <td class="src">
+            浦东新区卫健委立项批复<br>
+            业务用房修缮及装修工程，财政预算98.21万落地<br>
+            <span class="doc-no">浦卫计财〔2026〕10号（2026.04.28批复）</span>
+          </td>
+          <td class="biz">财政资金线索<br>+ 院内改造线索</td>
+          <td class="grade"><span class="badge badge-a">A 级</span></td>
+          <td class="month">2026年<br>10月</td>
+          <td class="dept">信息科<br>总务科</td>
+          <td class="prod">
+            <span class="tag">医疗交换机</span>
+            <span class="tag">EIA无感知认证</span>
+            <span class="tag">机房配套服务器</span>
+          </td>
+          <td class="link"><a href="https://www.pudong.gov.cn/zwgk/wjw_zdgz_xmjs/2026/126/354900.html" target="_blank">浦东卫健委</a></td>
+        </tr>
+        <tr>
+          <td class="idx idx-a">2</td>
+          <td class="hosp">浦东新区上钢社区卫生服务中心<div class="district">浦东新区</div></td>
+          <td class="src">
+            浦东新区发改委可研批复<br>
+            改造提升工程总投资3695.68万，含强弱电系统改造更新<br>
+            区财力安排，已进入初步设计概算报批阶段<br>
+            <span class="doc-no">沪浦发改社〔2026〕401号（2026.05.21批复）</span>
+          </td>
+          <td class="biz">方案初设线索<br>+ 财政资金线索</td>
+          <td class="grade"><span class="badge badge-a">A 级</span></td>
+          <td class="month">2026年<br>12月</td>
+          <td class="dept">信息科<br>基建办</td>
+          <td class="prod">
+            <span class="tag">核心交换机</span>
+            <span class="tag">SDN组网</span>
+            <span class="tag">机房改造配套</span>
+            <span class="tag">EIA认证</span>
+          </td>
+          <td class="link"><a href="https://www.pudong.gov.cn/zwgk/azt_cxjsgl/2026/142/355376.html" target="_blank">浦东发改委</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ══════════ B级 ══════════ -->
+<div class="section">
+  <div class="section-title st-b">🟠 B级商机（重点培育｜预计6-12个月跟进维护）</div>
+  <div class="tbl-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>序号</th>
+          <th>医院名称（所属区县）</th>
+          <th>信息来源 &amp; 文件出处</th>
+          <th>商机类型</th>
+          <th>评级</th>
+          <th>预估招标落地</th>
+          <th>优先对接科室</th>
+          <th>适配H3C产品方向</th>
+          <th>网址</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="idx idx-b">3</td>
+          <td class="hosp">普陀区真如镇街道社区卫生服务中心<div class="district">普陀区</div></td>
+          <td class="src">
+            普陀区政府公报+上观新闻报道<br>
+            异地扩建主体结构2026.05.15封顶<br>
+            新建医技综合楼，总投资2.518亿<br>
+            <span class="doc-no">项目编号：2302PT0115F01</span>
+          </td>
+          <td class="biz">基建施工线索<br>+ 规划立项线索</td>
+          <td class="grade"><span class="badge badge-b">B 级</span></td>
+          <td class="month">2027年<br>02月</td>
+          <td class="dept">信息科<br>基建办</td>
+          <td class="prod">
+            <span class="tag">分布式存储</span>
+            <span class="tag">SDN组网</span>
+            <span class="tag">区域云平台</span>
+            <span class="tag">院内无线网络</span>
+          </td>
+          <td class="link"><a href="https://www.jfdaily.com/sgh/detail?id=1750336" target="_blank">上观新闻</a></td>
+        </tr>
+        <tr>
+          <td class="idx idx-b">4</td>
+          <td class="hosp">嘉定区中医医院<div class="district">嘉定区</div></td>
+          <td class="src">
+            嘉定区政府官网+上观新闻报道<br>
+            迁建工程总投资12.49亿，三级医院标准<br>
+            2024.09钢结构封顶，目前内部装修阶段<br>
+            <b>计划2026年8月建成交付</b><br>
+            <span class="doc-no">嘉定区重大工程2026年建成项目</span>
+          </td>
+          <td class="biz">基建施工线索<br>+ 方案初设线索</td>
+          <td class="grade"><span class="badge badge-b">B 级</span></td>
+          <td class="month">2027年<br>01月</td>
+          <td class="dept">信息中心<br>基建部</td>
+          <td class="prod">
+            <span class="tag">全院SDN</span>
+            <span class="tag">高端服务器</span>
+            <span class="tag">分布式存储</span>
+            <span class="tag">三甲级医疗云平台</span>
+            <span class="tag">EIA认证</span>
+          </td>
+          <td class="link"><a href="https://m.jfdaily.com/sgh/detail?id=1707287" target="_blank">上观新闻</a></td>
+        </tr>
+        <tr>
+          <td class="idx idx-b">5</td>
+          <td class="hosp">浦东新区老港社区卫生服务中心<div class="district">浦东新区</div></td>
+          <td class="src">
+            浦东政务公示+规资局征地公告<br>
+            迁建工程：130床，医疗综合楼+感染门诊楼<br>
+            国有土地房屋征收令已下达，征地补偿推进中<br>
+            <span class="doc-no">浦府房征决字[2026]第003号</span><br>
+            <span class="doc-no">征地预公告：2026.05.29发布</span>
+          </td>
+          <td class="biz">规划立项线索<br>+ 土地落地线索</td>
+          <td class="grade"><span class="badge badge-b">B 级</span></td>
+          <td class="month">2027年<br>04月</td>
+          <td class="dept">信息科<br>院办</td>
+          <td class="prod">
+            <span class="tag">医疗云平台</span>
+            <span class="tag">接入交换机</span>
+            <span class="tag">超融合存储</span>
+          </td>
+          <td class="link"><a href="https://www.pudong.gov.cn/pudong-interaction-front/collect/detail/683fad337c4a49148394ad12ee4d2989" target="_blank">浦东政务</a></td>
+        </tr>
+        <tr>
+          <td class="idx idx-b">6</td>
+          <td class="hosp">浦东新区大团社区卫生服务中心<div class="district">浦东新区</div></td>
+          <td class="src">
+            浦东发改委可研批复+公共资源交易平台<br>
+            迁建工程：门诊住院综合楼，28300㎡<br>
+            3-5月持续招标活跃（补充招标/资审公告）<br>
+            <span class="doc-no">沪浦发改社〔2024〕相关批复（2025.09初设）</span>
+          </td>
+          <td class="biz">方案初设线索<br>+ 立项线索</td>
+          <td class="grade"><span class="badge badge-b">B 级</span></td>
+          <td class="month">2027年<br>03月</td>
+          <td class="dept">信息科<br>基建项目组</td>
+          <td class="prod">
+            <span class="tag">机房服务器</span>
+            <span class="tag">全光交换机</span>
+            <span class="tag">医联体EIA认证</span>
+          </td>
+          <td class="link"><a href="https://www.ggzy.gov.cn/information/deal/html/a/310000/0101/20260327/0031b2e2b30d4eb044a2866f6e36e0f6a0db.html" target="_blank">公共资源交易平台</a></td>
+        </tr>
+        <tr>
+          <td class="idx idx-b">7</td>
+          <td class="hosp">长宁区华阳街道社区卫生服务中心<div class="district">长宁区</div></td>
+          <td class="src">
+            长宁区政府公开+媒体报道<br>
+            异地迁建：地上12层地下2层医疗综合大楼，2.3万㎡<br>
+            2025.07奠基，总投资约3.08亿，预计2年竣工<br>
+            <span class="doc-no">环评批复日期：2025.08</span>
+          </td>
+          <td class="biz">环评 + 初设批复线索</td>
+          <td class="grade"><span class="badge badge-b">B 级</span></td>
+          <td class="month">2027年<br>06月</td>
+          <td class="dept">信息科<br>基建办</td>
+          <td class="prod">
+            <span class="tag">核心交换机</span>
+            <span class="tag">分布式存储</span>
+            <span class="tag">院区SDN组网</span>
+          </td>
+          <td class="link"><a href="https://zwgk.shcn.gov.cn/xxgk/hyjd-qwjw/index.html" target="_blank">长宁区卫健委</a></td>
+        </tr>
+        <tr>
+          <td class="idx idx-b">8</td>
+          <td class="hosp">浦东新区周浦医院<div class="district">浦东新区</div></td>
+          <td class="src">
+            浦东发改委可研批复+规资局设计方案公示<br>
+            二期新建：400床急诊住院综合楼+数字化机房<br>
+            2024.07正式开工<br>
+            <span class="doc-no">沪浦发改社〔2024〕325号</span>
+          </td>
+          <td class="biz">新建立项线索<br>+ 方案初设线索</td>
+          <td class="grade"><span class="badge badge-b">B 级</span></td>
+          <td class="month">2027年<br>05月</td>
+          <td class="dept">信息中心<br>基建部</td>
+          <td class="prod">
+            <span class="tag">医疗服务器集群</span>
+            <span class="tag">智慧医院云平台</span>
+            <span class="tag">医共体组网设备</span>
+          </td>
+          <td class="link"><a href="https://www.pudong.gov.cn/zwgk/14486.gkml_ywl_xmsp/2022/286/28515.html" target="_blank">浦东发改委</a></td>
+        </tr>
+        <tr>
+          <td class="idx idx-b">9</td>
+          <td class="hosp">普陀区中医医院<div class="district">普陀区</div></td>
+          <td class="src">
+            普陀区发改委立项+规资局选址批复<br>
+            改扩建：新建8层门诊医技综合楼，总投资约3.5亿<br>
+            2026.05.05选址意见书正式获批，含智能化弱电规划<br>
+            <span class="doc-no">普发改投(2024)33号</span><br>
+            <span class="doc-no">设计方案批复延续至2026.12.31</span>
+          </td>
+          <td class="biz">改扩建立项线索<br>+ 选址获批线索</td>
+          <td class="grade"><span class="badge badge-b">B 级</span></td>
+          <td class="month">2027年<br>03月</td>
+          <td class="dept">信息中心<br>基建科</td>
+          <td class="prod">
+            <span class="tag">机房整套设备</span>
+            <span class="tag">SDN组网</span>
+            <span class="tag">EIA统一认证平台</span>
+          </td>
+          <td class="link"><a href="https://www.shpt.gov.cn/zhengwu/jsgcsjfascyj-ghzyjzdgz/2025/357/200876.html" target="_blank">普陀规资局</a></td>
+        </tr>
+        <tr>
+          <td class="idx idx-b">10</td>
+          <td class="hosp">奉贤区中心医院<div class="district">奉贤区</div></td>
+          <td class="src">
+            奉贤发改委项目建议书批复+5月招标公告<br>
+            二期扩建：新增200床，38600㎡<br>
+            2026.05.22已有招标公告发布<br>
+            <span class="doc-no">沪奉发改批〔2025〕102号</span>
+          </td>
+          <td class="biz">新建立项线索<br>+ 基建施工线索</td>
+          <td class="grade"><span class="badge badge-b">B 级</span></td>
+          <td class="month">2027年<br>06月</td>
+          <td class="dept">信息中心<br>基建办</td>
+          <td class="prod">
+            <span class="tag">服务器集群</span>
+            <span class="tag">区域医联体云平台</span>
+            <span class="tag">SDN组网</span>
+            <span class="tag">分布式存储</span>
+          </td>
+          <td class="link"><a href="https://www.fengxian.gov.cn/zwgk-search-front/api/fx/gazette/info?id=31b6f3b0209b6c71e4e780daf865db68" target="_blank">奉贤区政府</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ══════════ C级 ══════════ -->
+<div class="section">
+  <div class="section-title st-c">🟢 C级商机（长线储备｜12个月以上维护客情）</div>
+  <div class="tbl-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>序号</th>
+          <th>医院名称（所属区县）</th>
+          <th>信息来源 &amp; 文件出处</th>
+          <th>商机类型</th>
+          <th>评级</th>
+          <th>预估招标落地</th>
+          <th>优先对接科室</th>
+          <th>适配H3C产品方向</th>
+          <th>网址</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="idx idx-c">11</td>
+          <td class="hosp">浦东新区合庆社区卫生服务中心南社区分中心<div class="district">浦东新区</div></td>
+          <td class="src">
+            规资局用地预审+招标平台<br>
+            新建工程，医疗用地获批<br>
+            <span class="doc-no">沪浦预征地告〔2026〕55号（2026.04.10）</span><br>
+            <span class="doc-no">用地预审：2025.12.30获批</span>
+          </td>
+          <td class="biz">征地规划立项线索</td>
+          <td class="grade"><span class="badge badge-c">C 级</span></td>
+          <td class="month">2027年<br>12月</td>
+          <td class="dept">医务科<br>总务科</td>
+          <td class="prod">
+            <span class="tag">基层社区云</span>
+            <span class="tag">EIA无感知认证</span>
+            <span class="tag">接入交换机</span>
+          </td>
+          <td class="link"><a href="https://hd.ghzyj.sh.gov.cn/ghsp/ghxk/xmxzyjs/202512/t20251230_1256504.html" target="_blank">规资局用地预审</a></td>
+        </tr>
+        <tr>
+          <td class="idx idx-c">12</td>
+          <td class="hosp">浦东新区妇幼保健院南院<div class="district">浦东新区</div></td>
+          <td class="src">
+            浦东发改委可研批复+规资局规划许可<br>
+            南院一期新建，施工中标3.83亿<br>
+            2026.05.19发布招标公告（施工进行中）<br>
+            <span class="doc-no">沪浦发改社〔2024〕915号</span>
+          </td>
+          <td class="biz">新建立项线索<br>+ 基建施工线索</td>
+          <td class="grade"><span class="badge badge-c">C 级</span></td>
+          <td class="month">2028年<br>02月</td>
+          <td class="dept">信息科<br>财务科</td>
+          <td class="prod">
+            <span class="tag">超融合服务器</span>
+            <span class="tag">分布式存储</span>
+            <span class="tag">区域医联体云平台</span>
+          </td>
+          <td class="link"><a href="https://shanghai.okcis.cn/njww20260519012837900673.html" target="_blank">招标平台</a></td>
+        </tr>
+        <tr>
+          <td class="idx idx-c">13</td>
+          <td class="hosp">闵行区瑞金医院闵行院区<div class="district">闵行区</div></td>
+          <td class="src">
+            闵行发改委可研批复+中建八局施工报道<br>
+            新建院区总投资16.015亿，12.7万㎡，500床<br>
+            2025.12启动施工，目前地下连续墙施工中<br>
+            <span class="doc-no">可研批复日期：2025.03.13</span>
+          </td>
+          <td class="biz">新建立项线索<br>+ 财政储备线索</td>
+          <td class="grade"><span class="badge badge-c">C 级</span></td>
+          <td class="month">2028年<br>05月</td>
+          <td class="dept">信息中心<br>采购部</td>
+          <td class="prod">
+            <span class="tag">高端服务器</span>
+            <span class="tag">分布式存储</span>
+            <span class="tag">三甲级医疗云平台</span>
+            <span class="tag">全院SDN</span>
+          </td>
+          <td class="link"><a href="https://zwgk.shmh.gov.cn/mh-xxgk-cms/website/mh_xxgk/xxgk_ghj_ywxx_ghglgs/content/f2926d69-9daa-4830-92b1-021fa07c8fa0.htm" target="_blank">闵行区规划公示</a></td>
+        </tr>
+        <tr>
+          <td class="idx idx-c">14</td>
+          <td class="hosp">上海中医药大学附属岳阳中西医结合医院（国家中医临床研究基地）<div class="district">虹口区</div></td>
+          <td class="src">
+            上海市发改委项目建议书批复<br>
+            新建19层综合楼，350床，51631㎡<br>
+            批复有效期至2028.05.12<br>
+            <span class="doc-no">沪发改社〔2026〕15号（2026.05.12批复）</span>
+          </td>
+          <td class="biz">新建立项线索</td>
+          <td class="grade"><span class="badge badge-c">C 级</span></td>
+          <td class="month">2028年<br>06月</td>
+          <td class="dept">信息中心<br>基建办</td>
+          <td class="prod">
+            <span class="tag">高端服务器</span>
+            <span class="tag">核心交换机</span>
+            <span class="tag">全院SDN</span>
+            <span class="tag">分布式存储</span>
+            <span class="tag">安全</span>
+          </td>
+          <td class="link"><a href="https://fgw.sh.gov.cn/fgw-interaction-front/biz/projectApproval/info?id=1134c3e30c2a40479a665161adef8453" target="_blank">市发改委</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ── 行动建议 ── -->
+<div class="action-section">
+  <div class="action-title">📋 本周销售行动建议</div>
+  <div class="action-body">
+    <div class="action-item ai-urgent">
+      <strong>🔴 本周立即行动（A级）</strong>
+      ① <b>上钢社区卫生中心</b>：可研5月21日刚批复3695万，含强弱电改造，初步设计概算报批窗口期，<b>本周联系信息科推SDN+机房方案</b><br>
+      ② <b>东明社区卫生中心</b>：98.21万修缮预算已落地，10月前启动，推交换机+EIA
+    </div>
+    <div class="action-item ai-important">
+      <strong>🟠 Q3重点跟进（B级优先级排序）</strong>
+      ① <b>嘉定区中医医院</b>：8月建成交付，12.49亿体量，装修阶段即应切入<br>
+      ② <b>奉贤区中心医院</b>：二期5月已有招标，立项+招标双确认<br>
+      ③ <b>真如镇街道社卫</b>：5.15主体封顶，信息化采购窗口临近<br>
+      ④ <b>普陀区中医医院</b>：5月选址意见书获批，3.5亿体量，文号齐全可溯源拜访
+    </div>
+    <div class="action-item ai-reserve">
+      <strong>🟢 长线建档（C级储备）</strong>
+      <b>瑞金医院闵行院区</b>（16亿）和<b>岳阳医院国家中医临床基地</b>（5.1万㎡）均为超大体量储备项目，建议Q3前完成决策层拜访建档，以备2-3年竞争布局。
+    </div>
+  </div>
+</div>
+
+<!-- ── 政策与人事变动 ── -->
+<div class="section" style="margin-bottom:24px;">
+  <div class="section-title" style="background:linear-gradient(90deg,#5a2d9c,#7c3aed);">📌 政策/人事关联线索（非独立商机，但影响跟进节奏）</div>
+  <div class="tbl-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>类别</th>
+          <th>内容</th>
+          <th>影响分析</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="font-weight:600;">人事变动</td>
+          <td style="font-size:13px;">
+            徐汇区中心医院党委副书记、副院长<b>程捷</b>拟任区属事业单位正处职（2026.05.25公示）<br>
+            <span class="doc-no">来源：徐汇区区管干部任前公示</span>
+          </td>
+          <td style="font-size:13px;">新领导上任窗口期，如后续分管信息化则需跟进拜访</td>
+        </tr>
+        <tr>
+          <td style="font-weight:600;">人事变动</td>
+          <td style="font-size:13px;">
+            <b>赵丹丹</b>任上海申康医院发展中心主任（2026.05.25任命）<br>
+            <span class="doc-no">来源：上海市人民政府任命通知</span>
+          </td>
+          <td style="font-size:13px;">申康管理全市26家市级医院，新主任到任或推动市级医院信息化统一规划</td>
+        </tr>
+        <tr>
+          <td style="font-weight:600;">政策动向</td>
+          <td style="font-size:13px;">
+            2026年上海市深化医改工作要点（2026.05.21发布）<br>
+            2026年上海市医政工作要点：推进市级平台统一+智慧转诊信息化<br>
+            <span class="doc-no">来源：沪卫医[2026]相关文件</span>
+          </td>
+          <td style="font-size:13px;">区级医院接入市级信息平台倒逼信息化升级，利好H3C医联体区域云平台</td>
+        </tr>
+        <tr>
+          <td style="font-weight:600;">基建进展</td>
+          <td style="font-size:13px;">
+            静安区大宁路街道社区卫生服务中心门诊手术室建设装修基建<b>4月30日成交</b><br>
+            <span class="doc-no">来源：静安区卫健委批复</span>
+          </td>
+          <td style="font-size:13px;">手术室新增=医疗设备网络接入需求，可推EIA+接入交换机</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="footer">
+  本报告由 <span>WorkBuddy 上海区域医疗信息化商机情报系统</span> 生成 · 仅供新华三医疗线销售内部参考<br>
+  下期周报：<span>2026年6月11日（第23周）</span> · 数据源：发改委/卫健委/规资局/政府采购平台等政府文件级来源
+</div>
+
+</body>
+</html>
